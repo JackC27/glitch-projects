@@ -1,0 +1,63 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: http://mozilla.github.io/nunjucks/ -->
+<!-- jade: http://jade-lang.com/ -->
+<!-- haml: http://haml.info/tutorial.html -->
+<!-- hbs(handlebars): http://handlebarsjs.com/expressions.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Gomix!</title>
+    <meta name="description" content="A cool thing made with Gomix">
+    <link id="favicon" rel="icon" href="https://gomix.com/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Weather Dashboard
+      </h1>
+    </header>
+
+    <main>
+      <p>Find your city Below</p>
+      <section class="boise">
+        <img id="boiseIMG" src="#" alt="loading..."/>
+        <h3>Boise</h3>
+        <p>Percipitation on the ground<br><strong> past 24 hours:</strong></p><span id="percip"></span>
+        <p>Percipitation on the ground<br><strong>past 1 hour:</strong></p><span id="percip1hr"></span>
+        <p>Temp(feels like):<strong><span id="temp"></span></strong></p>
+        
+      </section>
+      
+      <section>
+        <button value="Refresh" onclick="getBoise()">Refresh</button>
+      </section>
+      
+    </main>
+
+    <footer>
+      <ul>
+          <li>
+            <a href="https://gomix.com"><p>Remix this in Gomix</p></a>
+          </li>
+          <li>
+            <a href="https://weatherunderground.com"><p>Data provided by WeatherUnderground.com</p></a>
+          </li>
+      </ul>
+    </footer>
+
+    <!-- Your web-app is https, so your scripts need to be too
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>-->
+    <script src="/client.js"></script>
+
+  </body>
+</html>
